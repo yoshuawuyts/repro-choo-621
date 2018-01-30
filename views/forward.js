@@ -6,12 +6,12 @@ function view (state, emit) {
   return html`
     <body class="sans-serif">
       <h1 class="f-headline pa3 pa4-ns" onclick=${onclick}>
-        forward
+        back
       </h1>
     </body>
   `
 
   function onclick () {
-    emit('pushState', '/forward')
+    emit('popState')
   }
 }

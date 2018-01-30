@@ -16,6 +16,7 @@ if (process.env.NODE_ENV !== 'production') {
 app.use(store)
 
 app.route('/', require('./views/main'))
+app.route('/forward', require('./views/forward'))
 app.route('/*', require('./views/404'))
 
 if (!module.parent) app.mount('body')
